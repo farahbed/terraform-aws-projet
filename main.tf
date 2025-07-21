@@ -1,6 +1,7 @@
 provider "aws" {
   region  = "eu-west-3"
-  profile = "terraform-dev"
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key 
 }
 
 resource "random_id" "suffix" {
@@ -64,3 +65,8 @@ output "public_ip" {
   description = "Adresse IP publique de l'instance EC2"
   value       = aws_instance.dev_web.public_ip
 }
+# 👉 Ajoute les variables ici :
+variable "aws_access_key" {}
+variable "aws_secret_key" {}
+
+
