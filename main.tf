@@ -65,8 +65,9 @@ output "public_ip" {
   description = "Adresse IP publique de l'instance EC2"
   value       = aws_instance.dev_web.public_ip
 }
-# 👉 Ajoute les variables ici :
+
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
 
 
+# relance workflow
