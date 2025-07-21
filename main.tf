@@ -9,7 +9,7 @@ resource "random_id" "suffix" {
 
 resource "aws_key_pair" "farah_key" {
   key_name   = "farah-key"
-  public_key = file("~/.ssh/farah-key.pub")
+  public_key = file("${path.module}/id_github.pub")
 }
 
 resource "aws_security_group" "dev_web_sg" {
