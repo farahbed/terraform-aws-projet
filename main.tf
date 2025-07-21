@@ -64,8 +64,5 @@ output "public_ip" {
   value       = aws_instance.dev_web.public_ip
 }
 
-variable "aws_access_key" {}
-variable "aws_secret_key" {}
-
 
 # relance workflow
